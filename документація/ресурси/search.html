@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="xdocs-url-prefix" content="{{PAGE_URL_PREFIX}}">
+</head>
+<body>
+
+<script>
+  const searchData = JSON.parse("[{\"title\":\"Документація ЛіМавки\",\"content\":\"# ЛіМавка\\n\\nЛіМавка це прошивка на основі [KeiraOS](https://github.com/lilka-dev/keira) для української саморобної консолі [Лілка](https://lilka.dev) з підтримкою української мови програмування [Мавки](https://мавка.укр).\\n\\nЛіМавка надає можливість писати програми для Лілки повністю українською мовою!\\n\\nПосилання:\\n\\n- [Завантажити прошивку ЛіМавка](./завантажити.html)\\n\\n- [Основни для програмування в ЛіМавці](./приклади.html)\\n\\n- [Приклади програм в ЛіМавці](./приклади.html)\\n\",\"path\":\"index.html\"},{\"title\":\"Документація ЛіМавки\",\"content\":\"# Завантажити ЛіМавку\\n\\n...\\n\",\"path\":\"завантажити.html\"},{\"title\":\"Документація ЛіМавки\",\"content\":\"# Основи\\n\\n...\\n\",\"path\":\"основи.html\"},{\"title\":\"Полотно | Документація ЛіМавки\",\"content\":\"# Полотно\\n\\n```мавка\\nПолотно.заповнити(Колір.ЧОРНИЙ)\\n\\nПолотно.круг(50, 50, 30)\\n\\nПолотно.запланувати()\\n```\\n\\n## Константи\\n\\n### `Полотно.Ш`\\n\\nШирина полотна (pixels).\\n\\n### `Полотно.В`\\n\\nВисота полотна (pixels).\\n\\n## Дії\\n\\n### `Полотно.колір565(ч, з, с)`\\n\",\"path\":\"мавка-Полотно.html\"},{\"title\":\"Кнопки | Документація ЛіМавки\",\"content\":\"\",\"path\":\"мавка-Кнопки.html\"},{\"title\":\"Колір | Документація ЛіМавки\",\"content\":\"\",\"path\":\"мавка-Колір.html\"}]");
+
+  window.addEventListener("message", (event) => {
+    const eventData = event.data;
+    const eventId = eventData.id;
+    const eventType = eventData.type;
+    if (eventType === "search") {
+      const query = eventData.query;
+      const results = searchData.filter((item) => {
+        return item.title.toLowerCase().includes(query.toLowerCase());
+      });
+      window.parent.postMessage(
+        {
+          id: eventId,
+          result: results
+        },
+        "*"
+      );
+    }
+  });
+</script>
+</body>
+</html>

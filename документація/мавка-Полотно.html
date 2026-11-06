@@ -46,20 +46,20 @@
   Завантажити
 </a>
 <a
-  href="./основи.html"
+  href="./приклад-програми-мавкою.html"
   class="XDocsPageNavigationItem "
-  data-navigation-item="Основи"
+  data-navigation-item="Приклад програми Мавкою"
 >
-  Основи
+  Приклад програми Мавкою
 </a>
 <button
   class="XDocsPageNavigationItem"
-  data-navigation-item="Глобальні"
+  data-navigation-item="Мавка"
   data-navigation-item-expanded-name=""
   data-navigation-item-expanded="true"
 >
   <span class="XDocsPageNavigationItemName"
-    >Глобальні</span
+    >Мавка</span
   >
   <span class="XDocsPageNavigationItemArrow">
     <svg
@@ -75,7 +75,7 @@
 </button>
 <div
   class="XDocsPageNavigationSubmenu"
-  data-navigation-submenu="Глобальні"
+  data-navigation-submenu="Мавка"
   data-navigation-submenu-shown="true"
 >
   <a
@@ -123,7 +123,7 @@
     <h1>Полотно</h1>
 <pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span style="color:#E1E4E8">Полотно.заповнити(Колір.ЧОРНИЙ)</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">Полотно.круг(</span><span style="color:#79B8FF">50</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">50</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">30</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">Полотно.круг(</span><span style="color:#79B8FF">50</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">50</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">30</span><span style="color:#E1E4E8">, Колір.ЧЕРВОНИЙ)</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#E1E4E8">Полотно.запланувати()</span></span>
 <span class="line"></span></code></pre></div></pre>
@@ -134,10 +134,38 @@
 <p>Висота полотна (pixels).</p>
 <h2>Дії</h2>
 <h3><code>Полотно.колір565(ч, з, с)</code></h3>
+<p>Конвертує колір з формату RGB888 (0–255) у RGB565. Вертає число (колір у форматі RGB565).</p>
+<h3><code>Полотно.вдуга(ікс, ігр, р, пк, кк, колір)</code></h3>
+<p>Малює заповнену дугу (центр <code>ікс</code>, <code>ігр</code>, радіус <code>р</code>, кути <code>пк</code>, <code>кк</code>, колір).</p>
+<h3><code>Полотно.веліпс(ікс, ігр, рікс, рігр, колір)</code></h3>
+<p>Малює заповнений еліпс (центр <code>ікс</code>, <code>ігр</code>, радіуси <code>рікс</code>, <code>рігр</code>, колір).</p>
+<h3><code>Полотно.вквадрат(ікс, ігр, вис, шир, колір)</code></h3>
+<p>Малює заповнений прямокутник (<code>ікс</code>, <code>ігр</code>, висота <code>вис</code>, ширина <code>шир</code>, колір).</p>
+<h3><code>Полотно.втрикут(ікс0, ігр0, ікс1, ігр1, ікс2, ігр2, колір)</code></h3>
+<p>Малює заповнений трикутник за координатами трьох вершин (<code>ікс0</code>, <code>ігр0</code>, <code>ікс1</code>, <code>ігр1</code>, <code>ікс2</code>, <code>ігр2</code>) та кольором.</p>
+<h3><code>Полотно.дуга(ікс, ігр, р1, р2, пк, кк, колір)</code></h3>
+<p>Малює дугу (центр <code>ікс</code>, <code>ігр</code>, радіуси <code>р1</code>, <code>р2</code>, кути <code>пк</code>, <code>кк</code>, колір).</p>
+<h3><code>Полотно.еліпс(ікс, ігр, рікс, рігр, колір)</code></h3>
+<p>Малює еліпс (центр <code>ікс</code>, <code>ігр</code>, радіуси <code>рікс</code>, <code>рігр</code>, колір).</p>
+<h3><code>Полотно.квадрат(ікс, ігр, вис, шир, колір)</code></h3>
+<p>Малює прямокутник (<code>ікс</code>, <code>ігр</code>, висота <code>вис</code>, ширина <code>шир</code>, колір).</p>
+<h3><code>Полотно.коло(ікс, ігр, р, колір)</code></h3>
+<p>Малює коло (центр <code>ікс</code>, <code>ігр</code>, радіус <code>р</code>, колір).</p>
+<h3><code>Полотно.круг(ікс, ігр, р, колір)</code></h3>
+<p>Малює круг (центр <code>ікс</code>, <code>ігр</code>, радіус <code>р</code>, колір).</p>
+<h3><code>Полотно.лінія(ікс0, ігр0, ікс1, ігр1, колір)</code></h3>
+<p>Малює лінію від координати (<code>ікс0</code>, <code>ігр0</code>) до (<code>ікс1</code>, <code>ігр1</code>) заданим кольором.</p>
+<h3><code>Полотно.текст(ікс, ігр, значення, шрифт, розмір, колір)</code></h3>
+<p>Виводить текст на полотні (координати <code>ікс</code>, <code>ігр</code>, текст <code>значення</code>, <code>шрифт</code>, <code>розмір</code>, <code>колір</code>).</p>
+<p>Доступні шрифти: <code>4х6</code>, <code>5х7</code>, <code>5х8</code>, <code>6х12</code>, <code>6х13</code>, <code>7х13</code>, <code>8х13</code>, <code>9х15</code>, <code>10х20</code>.</p>
+<h3><code>Полотно.точка(ікс, ігр, колір)</code></h3>
+<p>Малює точку (pixel) за координатами (<code>ікс</code>, <code>ігр</code>) заданим кольором.</p>
+<h3><code>Полотно.трикут(ікс0, ігр0, ікс1, ігр1, ікс2, ігр2, колір)</code></h3>
+<p>Малює трикутник за координатами трьох вершин (<code>ікс0</code>, <code>ігр0</code>, <code>ікс1</code>, <code>ігр1</code>, <code>ікс2</code>, <code>ігр2</code>) та кольором.</p>
 
     
     <div class="XDocsPageContentBcFw">
-      <a data-is-prev="true" href="./основи.html">Відступ</a>
+      <a data-is-prev="true" href="./приклад-програми-мавкою.html">Відступ</a>
       <a data-is-next="true" href="./мавка-Кнопки.html">Наступ</a >
     </div>
     

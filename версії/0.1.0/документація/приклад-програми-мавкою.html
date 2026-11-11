@@ -17,7 +17,7 @@
   <link rel="icon" sizes="any" type="image/svg+xml" href="./ресурси/тема/лімавка.лого.svg">
 
   <link rel="stylesheet" href="./ресурси/ядро/highlight-atom-one-dark.css">
-<link rel="stylesheet" href="./ресурси/тема/тема.css?версія=0.23.3">
+<link rel="stylesheet" href="./ресурси/тема/тема.css?версія=0.24.0">
 </head>
 <body>
 
@@ -54,12 +54,12 @@
 </a>
 <button
   class="XDocsPageNavigationItem"
-  data-navigation-item="Мавка"
+  data-navigation-item="Глобальні"
   data-navigation-item-expanded-name=""
   data-navigation-item-expanded="false"
 >
   <span class="XDocsPageNavigationItemName"
-    >Мавка</span
+    >Глобальні</span
   >
   <span class="XDocsPageNavigationItemArrow">
     <svg
@@ -75,7 +75,7 @@
 </button>
 <div
   class="XDocsPageNavigationSubmenu"
-  data-navigation-submenu="Мавка"
+  data-navigation-submenu="Глобальні"
   data-navigation-submenu-shown="false"
 >
   <a
@@ -128,8 +128,8 @@
 <span class="line"><span style="color:#E1E4E8">  Колір.СИНІЙ,</span></span>
 <span class="line"><span style="color:#E1E4E8">]</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">ікс = Полотно.Ш/</span><span style="color:#79B8FF">2</span></span>
-<span class="line"><span style="color:#E1E4E8">ігр = Полотно.В/</span><span style="color:#79B8FF">2</span></span>
+<span class="line"><span style="color:#E1E4E8">г = Полотно.Ш/</span><span style="color:#79B8FF">2</span></span>
+<span class="line"><span style="color:#E1E4E8">в = Полотно.В/</span><span style="color:#79B8FF">2</span></span>
 <span class="line"><span style="color:#E1E4E8">р = </span><span style="color:#79B8FF">20</span></span>
 <span class="line"><span style="color:#E1E4E8">пк = </span><span style="color:#79B8FF">0</span></span>
 <span class="line"><span style="color:#E1E4E8">колір = кольори[пк]</span></span>
@@ -137,33 +137,33 @@
 <span class="line"><span style="color:#E1E4E8">запущено = </span><span style="color:#F97583">дійсне</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#F97583">поки</span><span style="color:#E1E4E8"> запущено</span></span>
-<span class="line"><span style="color:#E1E4E8">  Полотно.заповнити(</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">  Полотно.круг(ікс, ігр, р, колір)</span></span>
-<span class="line"><span style="color:#E1E4E8">  Полотно.запланувати() </span><span style="color:#6A737D">;; запланувати відмалювання</span></span>
+<span class="line"><span style="color:#E1E4E8">  Полотно.заповнити(Колір.ЧОРНИЙ)</span></span>
+<span class="line"><span style="color:#E1E4E8">  Полотно.круг(г, в, р, колір)</span></span>
+<span class="line"><span style="color:#E1E4E8">  Полотно.відмалювати() </span><span style="color:#6A737D">;; запланувати відмалювання</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">  Кнопки.оновити() </span><span style="color:#6A737D">;; отримати стан кнопок</span></span>
+<span class="line"><span style="color:#E1E4E8">  оновити_кнопки() </span><span style="color:#6A737D">;; оновити стан кнопок</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> Кнопки.вверх_нажато</span></span>
-<span class="line"><span style="color:#E1E4E8">    ігр -= </span><span style="color:#79B8FF">1</span></span>
+<span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> Кнопки.вверх.нажато</span></span>
+<span class="line"><span style="color:#E1E4E8">    в -= </span><span style="color:#79B8FF">1</span></span>
 <span class="line"><span style="color:#F97583">  кінець</span></span>
-<span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> Кнопки.вниз_нажато</span></span>
-<span class="line"><span style="color:#E1E4E8">    ігр += </span><span style="color:#79B8FF">1</span></span>
+<span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> Кнопки.вниз.нажато</span></span>
+<span class="line"><span style="color:#E1E4E8">    в += </span><span style="color:#79B8FF">1</span></span>
 <span class="line"><span style="color:#F97583">  кінець</span></span>
-<span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> Кнопки.вліво_нажато</span></span>
-<span class="line"><span style="color:#E1E4E8">    ікс -= </span><span style="color:#79B8FF">1</span></span>
+<span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> Кнопки.вліво.нажато</span></span>
+<span class="line"><span style="color:#E1E4E8">    г -= </span><span style="color:#79B8FF">1</span></span>
 <span class="line"><span style="color:#F97583">  кінець</span></span>
-<span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> Кнопки.вправо_нажато</span></span>
-<span class="line"><span style="color:#E1E4E8">    ікс += </span><span style="color:#79B8FF">1</span></span>
+<span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> Кнопки.вправо.нажато</span></span>
+<span class="line"><span style="color:#E1E4E8">    г += </span><span style="color:#79B8FF">1</span></span>
 <span class="line"><span style="color:#F97583">  кінець</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> Кнопки.а_нажато</span></span>
+<span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> Кнопки.а.нажато</span></span>
 <span class="line"><span style="color:#E1E4E8">    р += </span><span style="color:#79B8FF">1</span></span>
 <span class="line"><span style="color:#F97583">  кінець</span></span>
-<span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> Кнопки.д_нажато</span></span>
+<span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> Кнопки.д.нажато</span></span>
 <span class="line"><span style="color:#E1E4E8">    р -= </span><span style="color:#79B8FF">1</span></span>
 <span class="line"><span style="color:#F97583">  кінець</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> Кнопки.г_щойно_нажато</span></span>
+<span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> Кнопки.г.щойно_нажато</span></span>
 <span class="line"><span style="color:#E1E4E8">    пк += </span><span style="color:#79B8FF">1</span></span>
 <span class="line"><span style="color:#F97583">    якщо</span><span style="color:#E1E4E8"> пк == кольори.довжина</span></span>
 <span class="line"><span style="color:#E1E4E8">      пк = </span><span style="color:#79B8FF">0</span></span>
@@ -172,7 +172,7 @@
 <span class="line"><span style="color:#E1E4E8">    колір = кольори[пк]</span></span>
 <span class="line"><span style="color:#F97583">  кінець</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> Кнопки.б_щойно_відпущено</span></span>
+<span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> Кнопки.б.щойно_відпущено</span></span>
 <span class="line"><span style="color:#E1E4E8">    запущено = </span><span style="color:#F97583">недійсне</span></span>
 <span class="line"><span style="color:#F97583">  кінець</span></span>
 <span class="line"><span style="color:#F97583">кінець</span></span>
@@ -187,8 +187,8 @@
   </div>
 </div>
 
-<script src="./ресурси/ядро/ядро.js?версія=0.23.3"></script>
-<script src="./ресурси/тема/тема.js?версія=0.23.3"></script>
+<script src="./ресурси/ядро/ядро.js?версія=0.24.0"></script>
+<script src="./ресурси/тема/тема.js?версія=0.24.0"></script>
 
 </body>
 </html>

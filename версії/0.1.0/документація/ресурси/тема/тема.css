@@ -28,7 +28,7 @@
   --nav-pressed-rgb: 200, 200, 200;
   --nav-active-rgb: 0, 0, 0;
   --nav-active-text-rgb: 255, 255, 255;
-  --latest-rgb: 125, 46, 52;
+  --latest-rgb: 0, 0, 0;
   --latest-text-rgb: 255, 255, 255;
 }
 
@@ -1054,7 +1054,7 @@ html.mobile .ReleaseCard .ReleaseCardButton {
 #releases .ReleasesLoading .ReleasesLoadingError {
   margin: 0;
   font-size: 0.875rem;
-  color: rgb(var(--latest-rgb));
+  color: rgb(var(--text-rgb));
 }
 
 .ProgressBar {

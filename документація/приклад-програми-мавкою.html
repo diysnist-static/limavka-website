@@ -128,39 +128,47 @@
 <span class="line"><span style="color:#E1E4E8">  Колір.СИНІЙ,</span></span>
 <span class="line"><span style="color:#E1E4E8">]</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">г = Полотно.Ш/</span><span style="color:#79B8FF">2</span></span>
-<span class="line"><span style="color:#E1E4E8">в = Полотно.В/</span><span style="color:#79B8FF">2</span></span>
+<span class="line"><span style="color:#E1E4E8">ікс = Полотно.Ш/</span><span style="color:#79B8FF">2</span></span>
+<span class="line"><span style="color:#E1E4E8">ігр = Полотно.В/</span><span style="color:#79B8FF">2</span></span>
 <span class="line"><span style="color:#E1E4E8">р = </span><span style="color:#79B8FF">20</span></span>
 <span class="line"><span style="color:#E1E4E8">пк = </span><span style="color:#79B8FF">0</span></span>
 <span class="line"><span style="color:#E1E4E8">колір = кольори[пк]</span></span>
+<span class="line"><span style="color:#E1E4E8">шв = </span><span style="color:#79B8FF">50</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#E1E4E8">запущено = </span><span style="color:#F97583">дійсне</span></span>
+<span class="line"><span style="color:#E1E4E8">ост_ч = отримати_час()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">кнс_ч = отримати_час()</span></span>
+<span class="line"><span style="color:#E1E4E8">кіл_кдр = </span><span style="color:#79B8FF">0</span></span>
+<span class="line"><span style="color:#E1E4E8">пот_кнс = </span><span style="color:#79B8FF">0</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#F97583">поки</span><span style="color:#E1E4E8"> запущено</span></span>
-<span class="line"><span style="color:#E1E4E8">  Полотно.заповнити(Колір.ЧОРНИЙ)</span></span>
-<span class="line"><span style="color:#E1E4E8">  Полотно.круг(г, в, р, колір)</span></span>
-<span class="line"><span style="color:#E1E4E8">  Полотно.відмалювати() </span><span style="color:#6A737D">;; запланувати відмалювання</span></span>
+<span class="line"><span style="color:#E1E4E8">  пот_ч = отримати_час()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">  різ_ч = пот_ч - ост_ч</span></span>
+<span class="line"><span style="color:#E1E4E8">  ост_ч = пот_ч</span></span>
+<span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="color:#E1E4E8">  оновити_кнопки() </span><span style="color:#6A737D">;; оновити стан кнопок</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> Кнопки.вверх.нажато</span></span>
-<span class="line"><span style="color:#E1E4E8">    в -= </span><span style="color:#79B8FF">1</span></span>
+<span class="line"><span style="color:#E1E4E8">    ігр -= (шв * (різ_ч / </span><span style="color:#79B8FF">1000</span><span style="color:#E1E4E8">))</span></span>
 <span class="line"><span style="color:#F97583">  кінець</span></span>
 <span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> Кнопки.вниз.нажато</span></span>
-<span class="line"><span style="color:#E1E4E8">    в += </span><span style="color:#79B8FF">1</span></span>
+<span class="line"><span style="color:#E1E4E8">    ігр += (шв * (різ_ч / </span><span style="color:#79B8FF">1000</span><span style="color:#E1E4E8">))</span></span>
 <span class="line"><span style="color:#F97583">  кінець</span></span>
 <span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> Кнопки.вліво.нажато</span></span>
-<span class="line"><span style="color:#E1E4E8">    г -= </span><span style="color:#79B8FF">1</span></span>
+<span class="line"><span style="color:#E1E4E8">    ікс -= (шв * (різ_ч / </span><span style="color:#79B8FF">1000</span><span style="color:#E1E4E8">))</span></span>
 <span class="line"><span style="color:#F97583">  кінець</span></span>
 <span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> Кнопки.вправо.нажато</span></span>
-<span class="line"><span style="color:#E1E4E8">    г += </span><span style="color:#79B8FF">1</span></span>
+<span class="line"><span style="color:#E1E4E8">    ікс += (шв * (різ_ч / </span><span style="color:#79B8FF">1000</span><span style="color:#E1E4E8">))</span></span>
 <span class="line"><span style="color:#F97583">  кінець</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> Кнопки.а.нажато</span></span>
-<span class="line"><span style="color:#E1E4E8">    р += </span><span style="color:#79B8FF">1</span></span>
+<span class="line"><span style="color:#E1E4E8">    р += (шв * (різ_ч / </span><span style="color:#79B8FF">1000</span><span style="color:#E1E4E8">))</span></span>
 <span class="line"><span style="color:#F97583">  кінець</span></span>
 <span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> Кнопки.д.нажато</span></span>
-<span class="line"><span style="color:#E1E4E8">    р -= </span><span style="color:#79B8FF">1</span></span>
+<span class="line"><span style="color:#E1E4E8">    р -= (шв * (різ_ч / </span><span style="color:#79B8FF">1000</span><span style="color:#E1E4E8">))</span></span>
 <span class="line"><span style="color:#F97583">  кінець</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> Кнопки.г.щойно_нажато</span></span>
@@ -175,7 +183,30 @@
 <span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> Кнопки.б.щойно_відпущено</span></span>
 <span class="line"><span style="color:#E1E4E8">    запущено = </span><span style="color:#F97583">недійсне</span></span>
 <span class="line"><span style="color:#F97583">  кінець</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">  Полотно.заповнити(</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">  Полотно.круг(ікс, ігр, р, колір)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">  кіл_кдр += </span><span style="color:#79B8FF">1</span></span>
+<span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> (пот_ч - кнс_ч) >= </span><span style="color:#79B8FF">1000</span></span>
+<span class="line"><span style="color:#E1E4E8">    пот_кнс = кіл_кдр</span></span>
+<span class="line"><span style="color:#E1E4E8">    кіл_кдр = </span><span style="color:#79B8FF">0</span></span>
+<span class="line"><span style="color:#E1E4E8">    кнс_ч = пот_ч</span></span>
+<span class="line"><span style="color:#F97583">  кінець</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">  Полотно.текст(</span><span style="color:#79B8FF">10</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">10</span><span style="color:#E1E4E8">, Текст(пот_кнс), колір=Колір.ЧЕРВОНИЙ)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">  Полотно.відмалювати() </span><span style="color:#6A737D">;; запланувати відмалювання</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">  ч_обр = отримати_час() - пот_ч</span></span>
+<span class="line"><span style="color:#E1E4E8">  трв_кдр = </span><span style="color:#79B8FF">1000.0</span><span style="color:#E1E4E8"> / Полотно.КНС</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">  якщо</span><span style="color:#E1E4E8"> ч_обр &#x3C; трв_кдр</span></span>
+<span class="line"><span style="color:#E1E4E8">    спати(трв_кдр - ч_обр)</span></span>
+<span class="line"><span style="color:#F97583">  кінець</span></span>
 <span class="line"><span style="color:#F97583">кінець</span></span>
+<span class="line"></span>
 <span class="line"></span></code></pre></div></pre>
 
     
